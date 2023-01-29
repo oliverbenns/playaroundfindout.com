@@ -5,20 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  max-width: 600px;
-  background: blue;
-  margin: 0 auto;
 }
 
-.Inner {
-  height: 300px;
+.container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#root {
+  margin-bottom: 1rem;
+  aspect-ratio: 3/2;
 }
