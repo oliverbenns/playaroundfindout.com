@@ -12,16 +12,61 @@ body {
 }
 
 .container {
-  max-width: 480px;
+  max-width: 440px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #root {
   margin-bottom: 1rem;
   aspect-ratio: 3/2;
+}
+
+/* For svg line chart */
+svg {
+  overflow: visible;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+p {
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0.25rem 1rem;
+  display: flex;
+  font-size: 0.66rem;
+  gap: 1rem;
+  justify-content: center;
+  font-style: italic;
+  color: #444;
+}
+
+footer a {
+  all: unset;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

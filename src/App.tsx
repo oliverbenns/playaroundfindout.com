@@ -1,13 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
-  Legend,
   Label,
   ResponsiveContainer,
 } from "recharts";
@@ -23,12 +20,16 @@ const data = Array.from(Array(pointCount)).map((_, i) => {
 function App() {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data}>
+      <LineChart margin={{ left: -40 }} data={data}>
         <CartesianGrid strokeDasharray="1 1" />
-        <XAxis>
+        <XAxis tickFormatter={() => ""}>
           <Label>Play around</Label>
         </XAxis>
-        <YAxis tickCount={pointCount} domain={[0, pointCount - 1]}>
+        <YAxis
+          tickFormatter={() => ""}
+          tickCount={pointCount}
+          domain={[0, pointCount - 1]}
+        >
           <Label angle={-90}>Find out</Label>
         </YAxis>
         <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
